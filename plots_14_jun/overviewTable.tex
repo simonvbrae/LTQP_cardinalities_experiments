@@ -1,0 +1,75 @@
+\documentclass[preview]{standalone} 
+\usepackage[a4paper]{geometry} 
+\usepackage{tabularx} 
+\begin{document} 
+\begin{table}[!ht] %[H]
+\caption{Execution time per query of each configuration} 
+\centering 
+\begin{tabular}{lcccccc} 
+& b-heuristic & b-card & i-heuristic & i-card & t.o. & t.o.+i \\ \hline 
+interactive-discover-1-0 & 11072 & 12410 & 11170 & \textbf{2670} & 12704 & 4217 \\ 
+ interactive-discover-1-1 & 531 & 551 & 547 & \textbf{484} & 792 & 520 \\ 
+ interactive-discover-1-2 & 271 & 261 & 289 & \textbf{241} & 411 & 280 \\ 
+ interactive-discover-1-3 & \textbf{9366} & 9549 & 11722 & 10843 & 9478 & 12217 \\ 
+ interactive-discover-1-4 & 10268 & 11278 & 10526 & \textbf{3366} & 8671 & 4518 \\ 
+ interactive-discover-2-0 & 13630 & 15230 & 17880 & \textbf{3198} & 14420 & 4107 \\ 
+ interactive-discover-2-1 & 764 & 807 & 750 & \textbf{483} & 877 & 697 \\ 
+ interactive-discover-2-2 & 392 & 399 & 425 & \textbf{322} & 414 & 394 \\ 
+ interactive-discover-2-3 & 14467 & 14595 & 15038 & 13997 & 12515 & \textbf{9891} \\ 
+ interactive-discover-2-4 & 13660 & 14558 & 16395 & \textbf{4297} & 12397 & 5181 \\ 
+ interactive-discover-3-0 & 3 & \textbf{2} & 5 & 3 & \textbf{2} & 3 \\ 
+ interactive-discover-3-1 & 2 & \textbf{1} & 6 & 60000 & 2 & 60000 \\ 
+ interactive-discover-3-2 & 5 & 2 & \textbf{1} & \textbf{1} & \textbf{1} & 2 \\ 
+ interactive-discover-3-3 & 8 & 10 & \textbf{5} & 60000 & \textbf{5} & 13 \\ 
+ interactive-discover-3-4 & 6 & 8 & \textbf{4} & \textbf{4} & \textbf{4} & 6 \\ 
+ interactive-discover-4-0 & 1 & 1 & 1 & 1 & \textbf{0} & \textbf{0} \\ 
+ interactive-discover-4-1 & 1 & 1 & 1 & 1 & \textbf{0} & \textbf{0} \\ 
+ interactive-discover-4-2 & 1 & 1 & 1 & 1 & \textbf{0} & \textbf{0} \\ 
+ interactive-discover-4-3 & 1 & 1 & 1 & 1 & \textbf{0} & \textbf{0} \\ 
+ interactive-discover-4-4 & 1 & 1 & 2 & 3 & \textbf{0} & \textbf{0} \\ 
+ interactive-discover-5-0 & 3915 & 3999 & 3935 & 3781 & \textbf{3723} & 3992 \\ 
+ interactive-discover-5-1 & 216 & 222 & 201 & \textbf{150} & 166 & 213 \\ 
+ interactive-discover-5-2 & 116 & 135 & 117 & \textbf{102} & 105 & 113 \\ 
+ interactive-discover-5-3 & 3396 & 3407 & 3375 & \textbf{3160} & 3240 & 3239 \\ 
+ interactive-discover-5-4 & 3424 & 3439 & 3486 & \textbf{3334} & 3359 & 3401 \\ 
+ interactive-discover-6-1 & 423 & 419 & 431 & 143 & 410 & \textbf{132} \\ 
+ interactive-discover-6-2 & 260 & 285 & 296 & 111 & 248 & \textbf{106} \\ 
+ interactive-discover-6-4 & 11980 & 12115 & 12930 & 8448 & 11440 & \textbf{8144} \\ 
+ interactive-discover-7-1 & 445 & 458 & 488 & 190 & 450 & \textbf{156} \\ 
+ interactive-discover-7-2 & 293 & 323 & 311 & 150 & 276 & \textbf{110} \\ 
+ interactive-discover-7-4 & 18596 & 18700 & 20017 & 15044 & 9561 & \textbf{6640} \\ 
+ interactive-discover-8-0 & 8355 & 60000 & \textbf{7218} & 25624 & 19270 & 25409 \\ 
+ interactive-discover-8-1 & 11468 & 29084 & \textbf{8451} & 60000 & 13486 & 33157 \\ 
+ interactive-discover-8-2 & 12945 & 15130 & \textbf{6231} & 15371 & 15377 & 14653 \\ 
+ interactive-discover-8-3 & 18704 & \textbf{9413} & 36921 & 60000 & 10137 & 60000 \\ 
+ interactive-discover-8-4 & 19160 & 60000 & 26702 & 60000 & \textbf{15865} & 60000 \\ 
+ interactive-short-1-0 & 590 & 603 & 2081 & 5630 & \textbf{10} & 17 \\ 
+ interactive-short-1-1 & 102 & 104 & 1053 & 2564 & \textbf{4} & 7 \\ 
+ interactive-short-1-2 & 85 & 94 & 422 & 2181 & \textbf{9} & \textbf{9} \\ 
+ interactive-short-1-3 & 852 & 824 & 60000 & 6160 & \textbf{7} & 9 \\ 
+ interactive-short-1-4 & 438 & 441 & 60000 & 5351 & \textbf{5} & 6 \\ 
+ interactive-short-2-0 & 60000 & 60000 & 60000 & 60000 & \textbf{5081} & 60000 \\ 
+ interactive-short-2-3 & 60000 & 60000 & 60000 & 60000 & \textbf{7326} & 7525 \\ 
+ interactive-short-3-0 & 60000 & 60000 & 60000 & 60000 & 5 & \textbf{4} \\ 
+ interactive-short-3-1 & 60000 & 60000 & 60000 & 60000 & 19 & \textbf{6} \\ 
+ interactive-short-3-2 & 60000 & 60000 & 60000 & 60000 & \textbf{8} & 34 \\ 
+ interactive-short-3-3 & 60000 & 60000 & 60000 & 60000 & \textbf{6} & 11 \\ 
+ interactive-short-3-4 & 60000 & 60000 & 60000 & 60000 & \textbf{28} & 262 \\ 
+ interactive-short-4-0 & 12 & 9 & 9 & 16 & \textbf{7} & \textbf{7} \\ 
+ interactive-short-4-1 & 6 & 5 & 4 & 7 & 393 & \textbf{1} \\ 
+ interactive-short-4-2 & 13 & 10 & 9 & 11 & 12 & \textbf{6} \\ 
+ interactive-short-4-3 & 13 & \textbf{11} & 14 & 18 & 134 & 193 \\ 
+ interactive-short-4-4 & 1 & 1 & 1 & 1 & 4 & \textbf{0} \\ 
+ interactive-short-5-0 & 352 & 321 & 415 & 434 & \textbf{232} & 385 \\ 
+ interactive-short-5-1 & 326 & 305 & 339 & 405 & \textbf{2} & 5 \\ 
+ interactive-short-5-2 & 676 & 682 & 746 & 782 & \textbf{207} & 428 \\ 
+ interactive-short-5-3 & 279 & 247 & 314 & 313 & \textbf{4} & 11 \\ 
+ interactive-short-5-4 & 308 & \textbf{298} & 337 & 372 & 302 & 433 \\ 
+ interactive-short-7-0 & 60000 & 60000 & 60000 & 60000 & 26 & \textbf{12} \\ 
+ interactive-short-7-1 & 60000 & 60000 & 60000 & 60000 & 12 & \textbf{10} \\ 
+ interactive-short-7-2 & 60000 & 60000 & 60000 & 60000 & 357 & \textbf{24} \\ 
+ interactive-short-7-3 & 60000 & 60000 & 60000 & 60000 & \textbf{34} & 84 \\ 
+ interactive-short-7-4 & 60000 & 60000 & 60000 & 60000 & \textbf{82} & 103 \\ 
+ \end{tabular} 
+\end{table} 
+\end{document} 

@@ -1,0 +1,11 @@
+name;id;results;time;error;timestamps
+interactive-discover-7-0;0;1;60000;true;11956
+interactive-discover-7-1;0;1;488;false;481
+interactive-discover-7-2;0;1;311;false;310
+interactive-discover-7-3;0;2;60000;true;6207 17586
+interactive-discover-7-4;0;1;20017;false;3943
+interactive-discover-8-0;0;10;7218;false;5637 5748 5909 6010 6273 6328 6587 6804 7014 7070
+interactive-discover-8-1;0;10;8451;false;5410 5410 5717 5824 5862 6159 6221 6709 7025 7851
+interactive-discover-8-2;0;10;6231;false;4856 4856 5115 5153 5306 5434 5658 5861 6020 6136
+interactive-discover-8-3;0;10;36921;false;28597 28598 30657 30657 32083 32389 33007 34655 35499 36142
+interactive-discover-8-4;0;10;26702;false;20213 20214 21341 21341 22770 22772 23857 23857 25114 25678

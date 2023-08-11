@@ -1,0 +1,78 @@
+\documentclass[preview]{standalone}
+\usepackage[utf8]{inputenc}
+
+
+% Page setup
+\usepackage{amsmath}
+
+% Typography
+\usepackage[scaled]{helvet}
+\let\familydefault\sfdefault
+\usepackage{sansmath}
+\sansmath
+
+\usepackage[usenames,svgnames]{xcolor}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows,positioning,shapes,calc,intersections}
+\usepgfplotslibrary{colorbrewer}
+
+\newcommand\plotfontsize{\fontsize{9}{9}\selectfont}
+\pgfplotsset{compat=1.9,
+  axis lines=left,
+  every axis/.append style={
+    font=\plotfontsize,
+  },
+  label style={
+    font=\plotfontsize\bfseries,
+  },
+  tick label style={
+    font=\plotfontsize\bfseries,
+  },
+  legend cell align=left,
+  legend style={
+    /tikz/every even column/.append style={column sep=.3em},
+    draw=none, fill=none,
+    inner sep=0pt, outer sep=0pt,
+    anchor=north east,
+    text height=3pt,
+  },
+  log base 10 number format code/.code={%
+    $\pgfmathparse{10^(#1)}\pgfmathprintnumber{\pgfmathresult}$%
+  },
+  cycle list/Dark2,
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\newenvironment{resultAxis}{
+\begin{axis}[
+    width=350pt,
+    height=96pt,
+    xmin=0,
+    ymin=0,
+    %Y_MAX%
+    % Don't show axis exponent
+    ytick scale label code/.code={},
+    scaled y ticks=false,
+    x axis line style=-,
+    scale only axis,
+    clip=false,
+    axis on top,
+    xlabel={Time (ms)},
+    ylabel={Query results},
+    cycle list name=Dark2,
+    every axis plot/.append style={line width=1pt},
+    legend style={at={(1,0)},anchor=south east}
+]
+}{\end{axis}}
+\begin{tikzpicture}
+\begin{resultAxis}
+\addplot+[mark=none] table [y expr=\coordindex+1, x=base_zero, col sep=semicolon]{"8_may_dieff_interactive-short-1-4.csv"};
+\addplot+[mark=none] table [y expr=\coordindex+1, x=index_card, col sep=semicolon]{"8_may_dieff_interactive-short-1-4.csv"};
+\addplot+[mark=none] table [y expr=\coordindex+1, x=count, col sep=semicolon]{"8_may_dieff_interactive-short-1-4.csv"};
+\addplot+[mark=none] table [y expr=\coordindex+1, x=count+index, col sep=semicolon]{"8_may_dieff_interactive-short-1-4.csv"};
+\legend{base\_zero,index\_card,count,count+index}
+\end{resultAxis}
+\end{tikzpicture}
+\end{document}

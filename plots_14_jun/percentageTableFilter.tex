@@ -1,0 +1,16 @@
+\documentclass[preview]{standalone} 
+\usepackage[a4paper]{geometry} 
+\usepackage{tabularx} 
+\begin{document} 
+\begin{table}[!ht] 
+\centering 
+\begin{tabular}{lccc} 
+& \multicolumn{2}{c}{\% of queries} \\\cline{2-3}& better & worse & average improvement \\ \hline 
+index\_zero & 0.00\% & 5.33\% & -6.79\% \\ 
+index\_card & 20.00\% & 1.33\% & 32.57\% \\ 
+count & 5.33\% & 5.33\% & 0.23 \\ 
+count+index & 14.67\% & 1.33\% & 29.39\% \\ 
+\end{tabular} 
+\caption{Queries with execution time of at least 10\% better (resp. 10 worse) than the baseline}
+\end{table} 
+\end{document} 
