@@ -16,7 +16,7 @@ Code in this repository doesn't form one cohesive workflow as most files were cr
 4) Call the script from the comunica repo
 
 - splotQueryResultFiles.bash -> Splits the query results from bench.sh into files with less queries.
-- plot.sh -> Uses the [process_sparql_benchmark_results]() project to plot result data. 
+- plot.sh -> Uses the [process_sparql_benchmark_results](https://github.com/rubensworks/process-sparql-benchmark-results.js/) project to plot result data. 
 - generateDiefficiencyData.bash -> Formats the data for creating diefficiency graphs with psbr.
 
 - extractBestExecutionTimePerTimeout.py -> Functions that different manipulations and calculations on the timeout data. Also contains a function that selects the best execution time and writes its full result and the corresponding execution time to a file.
