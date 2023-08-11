@@ -1,4 +1,5 @@
-# Code with all scripts used within my thesis to
+# Plotting and processing code used within my thesis
+Uses of the following code include:
 - Run experiments
 - Clean & structure data
 - Plot results
